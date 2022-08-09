@@ -11,6 +11,7 @@
 //function to create a random number
 function randomInt(min, max) {
   if (!max) {
+    console.log("Hello World");
     max = min
     min = 0
   }
@@ -38,6 +39,7 @@ function generatePassword() {
   window.alert('You must enter a valid number between 8 and 128.')
 } else if (passwordLength < 8 || passwordLength >128) {
   window.alert('You must pick a valid number.')
+  generatePassword();
 } else 
 
 
@@ -78,8 +80,10 @@ var generatePassword = ''
 // for loop to create password with the users input
 for (i = 0; i < passwordLength; i++) {
   var randomList = getRandomItem(pollOfCharacters)
+  console.log(randomList);
   var randomCharacters = getRandomItem(randomList)
   generatePassword += randomCharacters
+  console.log(randomCharacters);
 }
 
 return generatePassword
